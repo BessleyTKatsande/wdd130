@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Martial Fine Arts</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<style>
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #5085ab;
+  --secondary-color: #f8bc06;
+  --accent1-color: #e02911e4;
+  --accent2-color: rgba(232, 232, 10, 0.847);
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Kanit";
+  --paragraph-font: Roboto, Helvetica, sans-serif;
+  --footing-font: "Kanit";
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #5085ab;  /* headlines on a white background */ 
+  --headline-color-on-color: #5085ab; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #5085ab; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #5085ab; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #f8bc06;
+  --nav-link-color: #5085ab;
+  --nav-background-color: #f8bc06;
+  --nav-hover-link-color: rgba(232, 232, 10, 0.847);
+  --nav-hover-background-color: #e02911e4;
+}
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+}
+
+#contact {
+   color: #5085ab
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
+}
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav  {
+  list-style-type: none;
+  display: flex;
+
+}
+nav a {
+  padding:1em;
+  min-width: 120px;
+  text-decoration: none;
+  padding: 10px;
+}
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.sitemap {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+  text-align: center;
+}
+
+.sm-home {
+  grid-area: home;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: #5085ab;
+  line-height: 3em;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+#contact-box {
+        grid-column: 1/4;
+        grid-row: 1/3;
+        z-index: -1;
+    }
+
+footer {
+        background-color: #f8bc06;
+        color: #5085ab;
+        padding: 25px 50px;
+        margin-top: 200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer a {
+        color: #5085ab;
+        text-decoration: none;
+        font: "Kanit";
+    }
+
+    footer a:hover {
+        color: rgba(232, 232, 10, 0.847);
+    }
+
+    footer p {
+        font-size: 1.2em;
+        color: #5085ab
+    }
+
+    footer p a:hover {
+        color: #e02911e4;
+        text-decoration: underline;
+    }
+
+    footer .social img{
+        padding-top: 15px;
+    }
+
+</style>
+<body>
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+            </a>
+            <nav>
+                <a href="site-plan.html">Home</a>
+                <a href="content.html">Content</a>
+                <a href="contactus2.html">Contact Us</a>
+            </nav>
+        </header>
+       
+
+        </div>
+        <main>
+            <h1> Types of martial arts:</h1>
+            <main class="hafs-grid">
+                <section class="hafs-card">
+                    <img src="/images/hafs.jpg" alt="hafs" alt="hafs">
+                    <h2>Hand and foot:</h2>
+                    <p>These forms of martial arts are dubbed as unarmed and often involve fighting while standing because they concentrate more on utilizing hand and foot strikes. Arm strikes are composed of hitting with a section of the arm, shoulder, elbow, palm, or knuckles. Examples of these martial arts include boxing and karate. To elaborate further, open-hand strikes encompass diverse methods employed in combat sports for either offensive or defensive purposes without clenching the hand into a fist. The most well-known among these methods is likely the reputed "karate chop", also denoted as a blade-hand strike, although a plethora of other techniques exist. In addition, a punch refers to a forceful hit using the fist. It is a fundamental technique in various martial arts and combat sports, particularly in western boxing where it is the sole offensive move permitted. In order to prevent injuries, athletes and practitioners may use hand wraps or other protective gear such as gloves during sports events.</p>
+                    <p>Foot strikes are physical strikes made with the foot's ball, heel, shin, knee, or thigh. One type is called a front kick. To execute it, one must lift the striking leg's knee and foot to the desired height, also called chambering, and then stretch out the leg to reach the target while maintaining a balanced and upright upper body. The point of contact is usually made with the ball of the foot. Another is a side kick. It is executed in a sideways direction with respect to the body of the performer. The two usual impact points employed in lateral kicks are the foot's heel and its external border. The heel is more appropriate for solid targets like the ribs, abdomen, mandible, cranium, and thorax. Examples of these martial arts include taekwondo and Muay thai. </p>
+                </section>
+                <section class="grapple-card">
+                    <img src="/image/grapple.jpg" alt="grapple" alt="grapple">
+                    <h2>Grapple:</h2>
+                    <p>Grappling is a full-contact combat sport based on throws, trips, sweeps, ground fighting, and submission grips. It can also be divided into stand-up and ground grappling. Grappling is composed of techniques such as clinch fighting; take downs and throwing; submission holds and techniques for pinning or controlling; and sweeps, reversals, turnovers, and escapes.</p>
+                    <p>To elaborate further, clinching, also known as clinch fighting, occurs when both fighters are standing and using different clinch holds on their opponent's upper body. The purpose of clinch work is usually to prepare for or prevent throws or takedowns. Takedown aims to gain a dominant position on the ground, either in a top position or in a position to apply a submission hold. This move is commonly used in martial arts competitions and self-defense situations. It requires a combination of technique, timing, and physical strength to execute successfully. A throw is an approach in which one wrestler hoists or destabilizes their adversary and guides them powerfully through the atmosphere or onto the floor. The goal tends to vary among the diverse branches of wrestling, with some aiming to incapacitate the opponent, while keeping the heaver upright, or to acquire a takedown or dominating position. Examples of these martial arts include wrestling, judo, aikido, and jiu-jitsu.</p>
+                </section>
+                <section class="fencing-card">
+                    <img class="fencing-img" src="images/fencing.jpg" alt="fencing">
+                    <h2>Weapons:</h2>
+                    <p>These are usually called armed martial arts because they involve the use of a weapon. Sometimes bodily strikes can be used in conjunction with the weapon. Examples of these martial arts include fencing, kendo, bojutsu, and Zulu stickfighting. Weapons can be divided into several categories such as melee, ranged, flexible, and defensive. Melee weapons are usually used directly and examples include swords and knives. Ranged weapons are used from a distance and examples include the bow and arrow. Flexible weapons include the whip and nunchaku. Lastly, defensive weapons are mostly used to protect and sometimes take down assailants with minimal harm. Examples include armor and shields.</p>
+                </section>
+        </main>
+        <footer>
+            <p>Dry Oar &copy; 2023 - Bessley Katsande</p>
+            <p><a href="site-plan.html">Home</a></p>
+            <p><a href="content.html">Content</a></p>
+            <p><a href="contactus2.html">Contact Us</a></p>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
