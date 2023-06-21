@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+     #content {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    #feedback {
+        background-color: antiquewhite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: .5em;
+        /* make this element invisible until we are ready for it */
+        display: none;      
+    }
+    .moveDown {
+        margin-top: 3em;
+    }
+
+    form {
+        /* Center the form on the page */
+        margin: 0 auto;
+        width: 400px;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    form li + li {
+        margin-top: 1em;
+    }
+
+    label {
+        /* Uniform size & alignment */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+    }
+
+    input,
+    textarea { 
+        /* To make sure that all text fields have the same font settings
+        By default, textareas have a monospace font */
+        font: 1em sans-serif;
+
+        /* Uniform text field size */
+        width: 300px;
+        box-sizing: border-box;
+
+        /* Match form field borders */
+        border: 1px solid #999;
+    }
+
+    input:focus,
+    textarea:focus {
+       /* Additional highlight for focused elements */
+       border-color: #000;
+    }
+
+    textarea {
+        /* Align multiline text fields with their labels */
+       vertical-align: top;
+
+       /* Provide space to type some text */
+        height: 5em;
+    }
+
+    .button {
+        /* Align buttons with the text fields */
+        padding-left: 90px; /* same size as the label elements */
+    }
+
+    button {
+        /* This extra margin represent roughly the same space as the space
+        between the labels and their text fields */
+        margin-left: 0.5em;
+    }
+
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        color:rgb(5, 5, 5);
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 150px auto;
+        background-color: #f8bc06;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a {
+        text-align: center;
+        color: #5085ab;
+        text-decoration: none;
+        padding: 35px;
+    }
+
+    nav a:hover {
+        color: #f8bc06;
+    }
+
+    .home-title {
+        color: white;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        font-size: 2em;
+        margin-top: 10px;
+    }
+
+    .icon {
+        width: 80px;
+        padding-top: 10px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    #logo_link {
+        padding-top: 5px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    main section {
+        text-align: center;
+    }
+
+    #background {
+        height: 725px;
+        background-color: #5085ab;
+        grid-column: 1/11;
+        grid-row: 4/9;
+    }   
+
+    nav a:hover {
+        background-color: #e02911e4;
+    }
+
+    footer {
+        background-color: #f8bc06;
+        color: #5085ab;
+        padding: 25px 50px;
+        margin-top: 200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer a {
+        color: #5085ab;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: rgba(232, 232, 10, 0.847);
+    }
+
+    footer p {
+        font-size: 1.2em;
+    }
+
+    footer p a:hover {
+        text-decoration: underline;
+    }
+
+    footer .social img{
+        padding-top: 15px;
+    }
+</style>
+
+<body>
+  <header>
+    <div class="logo-link"><img class="logo" img src="/images/head.jpg" alt="head"></div>
+    <nav>
+        <a href="index1.html">Home</a>
+        <a href="index2.html">Content</a>
+        <a href="index3.html">Contact Us</a>
+    </nav>
+  </header>
+ <main>
+    Hello, and thank you for taking the time to visit this site. I hope you have enjoyed your time spent here thus far, and it is my desire that I could teach you something new. If there is anything that you find amiss or if you would like to file a complaint, please do not hesitate to send me a message using the proper channels. However, be aware that it may take some time before I reply back and resolve the issue. My contacts are as follows-</p>
+    <p>Phone: +18332405104</p>
+    <p>Email: Martialfinearts@gmail.com</p>
+    <p>086 628 8300</p>
+    <p>Office: 4305 14th Ave, Brooklyn, North Dakota</p>
+  <p>Images for the Contact Us Page</p>
+    <img src="images/call.jpg" alt="call">
+ </main>
+  <footer>
+    <nav>
+      <p>FineMartialArts &copy; 2023 - Bessley Katsande</p>
+        <a href="index1.html">Home</a>
+        <a href="index2.html">Content</a>
+        <a href="index3.html">Contact Us</a>
+     <div class="social">
+        <a href="https://facebook.com" target="_blank">
+            <img src="images/facebook.png" alt="fb icon">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="images/twitter.png" alt="twitter icon">
+        </a>
+        <a href="https//instagram.com" target="_blank">
+            <img src="images/instagram.png" alt="instagram icon">
+        </a>
+     </div>
+    </nav>
+  </footer>
+</body>
+</html>

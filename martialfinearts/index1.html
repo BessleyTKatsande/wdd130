@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+     #content {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    #feedback {
+        background-color: antiquewhite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: .5em;
+        /* make this element invisible until we are ready for it */
+        display: none;      
+    }
+    .moveDown {
+        margin-top: 3em;
+    }
+
+    h3{
+    text-align:center;
+    }
+
+    form {
+        /* Center the form on the page */
+        margin: 0 auto;
+        width: 400px;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    form li + li {
+        margin-top: 1em;
+    }
+
+    label {
+        /* Uniform size & alignment */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+    }
+
+    input,
+    textarea { 
+        /* To make sure that all text fields have the same font settings
+        By default, textareas have a monospace font */
+        font: 1em sans-serif;
+
+        /* Uniform text field size */
+        width: 300px;
+        box-sizing: border-box;
+
+        /* Match form field borders */
+        border: 1px solid #999;
+    }
+
+    input:focus,
+    textarea:focus {
+       /* Additional highlight for focused elements */
+       border-color: #000;
+    }
+
+    textarea {
+        /* Align multiline text fields with their labels */
+       vertical-align: top;
+
+       /* Provide space to type some text */
+        height: 5em;
+    }
+
+    .button {
+        /* Align buttons with the text fields */
+        padding-left: 90px; /* same size as the label elements */
+    }
+
+    button {
+        /* This extra margin represent roughly the same space as the space
+        between the labels and their text fields */
+        margin-left: 0.5em;
+    }
+
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        color:rgb(5, 5, 5);
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 150px auto;
+        background-color: #f8bc06;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a {
+        text-align: center;
+        color: #5085ab;
+        text-decoration: none;
+        padding: 35px;
+    }
+
+    nav a:hover {
+        color: #f8bc06;
+    }
+
+    .home-title {
+        color: white;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        font-size: 2em;
+        margin-top: 10px;
+    }
+
+    .icon {
+        width: 80px;
+        padding-top: 10px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    #logo_link {
+        padding-top: 5px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    main section {
+        text-align: center;
+    }
+
+    #background {
+        height: 725px;
+        background-color: #5085ab;
+        grid-column: 1/11;
+        grid-row: 4/9;
+    }   
+
+    nav a:hover {
+        background-color: #e02911e4;
+    }
+
+    footer {
+        background-color: #f8bc06;
+        color: #5085ab;
+        padding: 25px 50px;
+        margin-top: 200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer a {
+        color: #5085ab;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: rgba(232, 232, 10, 0.847);
+    }
+
+    footer p {
+        font-size: 1.2em;
+    }
+
+    footer p a:hover {
+        text-decoration: underline;
+    }
+
+    footer .social img{
+        padding-top: 15px;
+    }
+</style>
+
+<body>
+  <header>
+    <div class="logo-link"><img class="logo" img src="/images/head.jpg" alt="head"></div>
+    <nav>
+        <a href="index1.html">Home</a>
+        <a href="index2.html">Content</a>
+        <a href="index3.html">Contact Us</a>
+    </nav>
+  </header>
+ <main>
+    <p>
+        Welcome to Martial Fine Arts. Here, we explore everything about martial arts. For starters, martial arts have diverse origins, as many countries have created their own unique forms of fighting to respond to a variety of situations ranging from armed to unarmed combat. We will also try to answer questions such as why some martial arts have their practitioners wear a gi and why certain martial arts have different colored belts. Lastly, we will also try to evaluate the lethality of a martial art and the best situations to utilize it.
+    </p>
+    <h3>Purpose</h3>
+    <p>Our main objective is to help those who enjoy rafting become more knowledgable of the activity inorder to have a wonderful experience. We also inform our customers of the best locations to undertake the activity, telling them of the proper equipment to use, and also warning them so common mistakes will be avoided.</p>
+    <h3>Audience</h3>
+    <p>Our target audience is predominantly those who are lovers of rafting, wish to know as much about it as possible, and want to partake in the activity. The former can be of any age but the latter should at least be 12-50 years of age. This duality allows us to reach a wider range of individuals and satisfy various demands.</p> 
+    <p>We also seek to share the stories that our audience members have about rafting so as to create a community for all rafting lovers and give everyone a chance to voice their experiences. Social media is key to this as we desire our audience to access our sites either via phone or laptop.</p>
+ </main>
+  <footer>
+    <nav>
+      <p>FineMartialArts &copy; 2023 - Bessley Katsande</p>
+        <a href="index1.html">Home</a>
+        <a href="index2.html">Content</a>
+        <a href="index3.html">Contact Us</a>
+     <div class="social">
+        <a href="https://facebook.com" target="_blank">
+            <img src="images/facebook.png" alt="fb icon">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="images/twitter.png" alt="twitter icon">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="images/instagram.png" alt="instagram icon">
+        </a>
+     </div>
+    </nav>
+  </footer>
+</body>
+
+</html>
