@@ -60,6 +60,7 @@
         text-align: center;
     }
 
+
     .home-title {
         color: white;
         font-family: 'Garamond', 'Lucida Bright', sans-serif;
@@ -127,6 +128,20 @@
     footer .social img{
         padding-top: 15px;
     }
+
+    #feedback {
+        background-color: antiquewhite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: .5em;
+        /* make this element invisible until we are ready for it */
+        display: none;      
+    }
+    .moveDown {
+        margin-top: 3em;
+    }
 </style>
 <head>
     <meta charset="UTF-8">
@@ -136,6 +151,27 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
+    <div id="feedback"></div>
+
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+
     <div id="content">
         <header>
             <a id="logo_link" href="index.html">
@@ -154,11 +190,7 @@
             </div>
         </div>
         <main>
-         <p>Hello, and thank you for taking the time to visit this site. We hope you have enjoyed your time spent here thus far, and it is our desire that you will come back soon. If there is anything that you find amiss or if you would like to file a complaint, please do not hesitate to send us a message using the proper channels. However, be aware that it may take some time before we reply back and resolve the issue. The proper channels to contact us are as follows:</p>
-            <p>Phone: +18332405104</p>
-            <p>Email: DryOar@gmail.com</p>
-            <p>Fax: 086 628 8300 </p>
-            <p>Office: 4305 14th Ave, Brooklyn, North Dakota</p>
+         
         </main>
         <footer>
             <p>Dry Oar &copy; 2023 - Bessley Katsande</p>
