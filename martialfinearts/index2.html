@@ -233,7 +233,55 @@
         width:500px;
         height: 500px;
         object-fit: contain;
-    }  
+    }
+    
+     /* Dropdown Button */
+     .dropbtn {
+      background-color: #f8bc06;
+      color: black;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #e02911e4;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #5085ab;
+    }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+        background-color: #5085ab;
+    }
 </style>
 
 <body>
@@ -242,9 +290,13 @@
         <img class="logo" src="images/mfa.png" alt="head">
     </a>
     <nav>
-        <a href="index1.html">Home</a>
-        <a href="index2.html">Content</a>
-        <a href="index3.html">Contact Us</a>
+        <div class="dropdown">
+            <button class="dropbtn">Table</button>
+            <div class="dropdown-content">
+                <a href="index1.html">Home</a>
+                <a href="index2.html">Content</a>
+                <a href="index3.html">Contact Us</a>
+            </div>
     </nav>
   </header>
  <main>
@@ -271,9 +323,14 @@
   <footer>
     <nav>
       <p>FineMartialArts &copy; 2023 - Bessley Katsande</p>
-        <a href="index1.html">Home</a>
-        <a href="index2.html">Content</a>
-        <a href="index3.html">Contact Us</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Table</button>
+        <div class="dropdown-content">
+            <a href="index1.html">Home</a>
+            <a href="index2.html">Content</a>
+            <a href="index3.html">Contact Us</a>
+        </div>
      <div class="social">
         <a href="https://facebook.com" target="_blank">
             <img src="images/facebook.png" alt="fb icon">

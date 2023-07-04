@@ -221,17 +221,137 @@
         margin-right: auto;
         width: 50%;
     } 
+
+    /* Dropdown Button */
+    .dropbtn {
+      background-color: #f8bc06;
+      color: black;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #e02911e4;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #5085ab;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: #5085ab;
+    }
+
+    form {
+        /* Center the form on the page */
+        margin: 0 auto;
+        width: 400px;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    form li + li {
+        margin-top: 1em;
+    }
+
+    label {
+        /* Uniform size & alignment */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+    }
+
+    input,
+    textarea { 
+        /* To make sure that all text fields have the same font settings
+        By default, textareas have a monospace font */
+        font: 1em sans-serif;
+
+        /* Uniform text field size */
+        width: 300px;
+        box-sizing: border-box;
+
+        /* Match form field borders */
+        border: 1px solid #999;
+    }
+
+    input:focus,
+    textarea:focus {
+       /* Additional highlight for focused elements */
+       border-color: #000;
+    }
+
+    textarea {
+        /* Align multiline text fields with their labels */
+       vertical-align: top;
+
+       /* Provide space to type some text */
+        height: 5em;
+    }
+
+    .button {
+        /* Align buttons with the text fields */
+        padding-left: 90px; /* same size as the label elements */
+    }
+
+    button {
+        /* This extra margin represent roughly the same space as the space
+        between the labels and their text fields */
+        margin-left: 0.5em;
+    }
 </style>
 
 <body>
+  <div id="feedback"></div>
+
   <header>
         <a id="logo_link">
             <img class="logo" src="images/mfa.png" alt="head">
         </a>
         <nav>
-            <a href="index1.html">Home</a>
-            <a href="index2.html">Content</a>
-            <a href="index3.html">Contact Us</a>
+            <div class="dropdown">
+                <button class="dropbtn">Table</button>
+                <div class="dropdown-content">
+                    <a href="index1.html">Home</a>
+                    <a href="index2.html">Content</a>
+                    <a href="index3.html">Contact Us</a>
+                </div>
         </nav>
       </header>
      <main>
@@ -244,14 +364,65 @@
             <p>Email: Martialfinearts@gmail.com</p>
             <p>Fax: 086 628 8300</p>
             <p>Office: 4305 14th Ave, Brooklyn, North Dakota</p>
+            <p>Altenatively, you can use the responsive form if the above does not work for you</p>
         </section>
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+              <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" />
+              </li>
+              <li>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" />
+              </li>
+              <li>
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+              </li>
+              <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+              </li>
+            </ul>
+            <li class="button">
+                <button type="submit">Send your message</button>
+            </li>
+          </form>
+
+        <script>
+            // get the feedback div element so we can do something with it.
+            const feedbackElement = document.getElementById('feedback');
+            // get the form so we can read what was entered in it.
+            const formElement = document.forms[0];
+            // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+            formElement.addEventListener('submit', function(e) {
+                // stop the form from doing the default action.
+                e.preventDefault();
+                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+                // make the feedback element visible.
+                feedbackElement.style.display = "block";
+                // add a class to move everything down so our message doesn't cover it.
+                document.body.classList.toggle('moveDown');
+            });
+        </script>    
      </main>
       <footer>
         <nav>
           <p>FineMartialArts &copy; 2023 - Bessley Katsande</p>
-            <a href="index1.html">Home</a>
-            <a href="index2.html">Content</a>
-            <a href="index3.html">Contact Us</a>
+
+          <div class="dropdown">
+            <button class="dropbtn">Table</button>
+            <div class="dropdown-content">
+                <a href="index1.html">Home</a>
+                <a href="index2.html">Content</a>
+                <a href="index3.html">Contact Us</a>
+            </div>
          <div class="social">
             <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.png" alt="fb icon">

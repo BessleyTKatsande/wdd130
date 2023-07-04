@@ -212,6 +212,54 @@
         margin-right: auto;
         width: 50%;
     }
+
+    /* Dropdown Button */
+    .dropbtn {
+      background-color: #f8bc06;
+      color: black;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #e02911e4;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #5085ab;
+    }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+        background-color: #5085ab;
+    }
 </style>
 
 <body>
@@ -220,30 +268,38 @@
         <img class="logo" src="images/mfa.png" alt="head">
     </a>
     <nav>
-        <a href="index1.html">Home</a>
-        <a href="index2.html">Content</a>
-        <a href="index3.html">Contact Us</a>
+        <div class="dropdown">
+            <button class="dropbtn">Table</button>
+            <div class="dropdown-content">
+                <a href="index1.html">Home</a>
+                <a href="index2.html">Content</a>
+                <a href="index3.html">Contact Us</a>
+            </div>
     </nav>
   </header>
- <main>
-    <div class="banner-box">
-        <img class="banner-box img" img src="images/banner.jpg" alt="banner">
-    </div>
-    <section class="paragraph-card">
-        <p>Welcome to Martial Fine Arts. Here, we explore everything about martial arts. For starters, martial arts have diverse origins, as many countries have created their own unique forms of fighting to respond to a variety of situations ranging from armed to unarmed combat. We will also try to answer questions such as why some martial arts have their practitioners wear a gi and why certain martial arts have different colored belts. Lastly, we will also try to evaluate the lethality of a martial art and the best situations to utilize it.</p>
-        <h3>Purpose</h3>
-        <p>Our main objective is to help those who enjoy rafting become more knowledgable of the activity inorder to have a wonderful experience. We also inform our customers of the best locations to undertake the activity, telling them of the proper equipment to use, and also warning them so common mistakes will be avoided.</p>
-        <h3>Audience</h3>
-        <p>Our target audience is predominantly those who are lovers of rafting, wish to know as much about it as possible, and want to partake in the activity. The former can be of any age but the latter should at least be 12-50 years of age. This duality allows us to reach a wider range of individuals and satisfy various demands.</p> 
-        <p>We also seek to share the stories that our audience members have about rafting so as to create a community for all rafting lovers and give everyone a chance to voice their experiences. Social media is key to this as we desire our audience to access our sites either via phone or laptop.</p>
-    </section>
+  <main class="home-grid">
+        <div class="banner-box">
+            <img class="banner-box img" img src="images/banner.jpg" alt="banner">
+        </div>
+        <section class="paragraph-card">
+            <p>Welcome to Martial Fine Arts. Here, we explore everything about martial arts. For starters, martial arts have diverse origins, as many countries have created their own unique forms of fighting to respond to a variety of situations ranging from armed to unarmed combat. We will also try to answer questions such as why some martial arts have their practitioners wear a gi and why certain martial arts have different colored belts. Lastly, we will also try to evaluate the lethality of a martial art and the best situations to utilize it.</p>
+            <h3>Purpose</h3>
+            <p>Our main objective is to help those who enjoy rafting become more knowledgable of the activity inorder to have a wonderful experience. We also inform our customers of the best locations to undertake the activity, telling them of the proper equipment to use, and also warning them so common mistakes will be avoided.</p>
+            <h3>Audience</h3>
+            <p>Our target audience is predominantly those who are lovers of rafting, wish to know as much about it as possible, and want to partake in the activity. The former can be of any age but the latter should at least be 12-50 years of age. This duality allows us to reach a wider range of individuals and satisfy various demands.</p> 
+            <p>We also seek to share the stories that our audience members have about rafting so as to create a community for all rafting lovers and give everyone a chance to voice their experiences. Social media is key to this as we desire our audience to access our sites either via phone or laptop.</p>
+        </section>
     </main>
   <footer>
     <nav>
       <p>FineMartialArts &copy; 2023 - Bessley Katsande</p>
-        <a href="index1.html">Home</a>
-        <a href="index2.html">Content</a>
-        <a href="index3.html">Contact Us</a>
+      <div class="dropdown">
+        <button class="dropbtn">Table</button>
+        <div class="dropdown-content">
+            <a href="index1.html">Home</a>
+            <a href="index2.html">Content</a>
+            <a href="index3.html">Contact Us</a>
+        </div>
      <div class="social">
         <a href="https://facebook.com" target="_blank">
             <img src="images/facebook.png" alt="fb icon">
